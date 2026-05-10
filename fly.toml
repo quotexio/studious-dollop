@@ -1,23 +1,13 @@
-# fly.toml app configuration file generated for studious-dollop on 2026-05-10T19:20:40Z
-#
-# See https://fly.io/docs/reference/configuration/ for information about how to use this file.
-#
-
-app = 'studious-dollop'
-primary_region = 'bom'
+app = "studious-dollop"
+primary_region = "dfw" # আপনার রিজিয়ন অনুযায়ী
 
 [build]
+  # আপনার বিল্ড সেটিংস
 
+# নিচের এই অংশটি বাদ দিন অথবা এভাবে রাখুন
 [http_service]
   internal_port = 8080
   force_https = true
-  auto_stop_machines = 'stop'
+  auto_stop_machines = false # এটি false রাখুন যাতে পোর্ট রেসপন্স না পেলেও বট বন্ধ না হয়
   auto_start_machines = true
-  min_machines_running = 0
-  processes = ['app']
-
-[[vm]]
-  memory = '1gb'
-  cpu_kind = 'shared'
-  cpus = 1
-  memory_mb = 256
+  min_machines_running = 1
