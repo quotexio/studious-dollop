@@ -1,0 +1,11 @@
+{
+  "name": "tg-info-bot",
+  "version": "1.0.0",
+  "main": "index.js",
+  "dependencies": {
+    "node-telegram-bot-api": "^0.64.0"
+  },
+  "scripts": {
+    "start": "node index.js"
+  }
+}
